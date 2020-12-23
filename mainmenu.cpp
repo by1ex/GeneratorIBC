@@ -11,5 +11,4 @@ MainMenu::MainMenu(QWidget *parent) :
 MainMenu::~MainMenu()
 {
     delete ui;
-
 }
