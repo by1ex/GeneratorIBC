@@ -58,6 +58,34 @@ QComboBox QAbstractItemView {
     selection-background-color:  rgb(240, 240, 240);
 	selection-color:  rgb(0, 0, 0);
 	border-radius: 5px;
+}
+
+/* ScrollBar*/
+
+QScrollBar:vertical {            
+	border: none;
+	background:white;
+	width: 6px;
+	margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+	border-radius: 3px;
+	background: rgb(200, 200, 200);
+	min-height: 0px;
+}
+QScrollBar::add-line:vertical {
+	background: rgb(200, 200, 200);
+	height: 0px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+	border-radius: 3px;
+}
+QScrollBar::sub-line:vertical {
+	background: rgb(200, 200, 200);
+	height: 0 px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+	border-radius: 3px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -70,17 +98,50 @@ QComboBox QAbstractItemView {
       <height>214</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="layoutDirection">
      <enum>Qt::LeftToRight</enum>
     </property>
     <property name="autoFillBackground">
      <bool>false</bool>
     </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
     <property name="sizeAdjustPolicy">
      <enum>QAbstractScrollArea::AdjustIgnored</enum>
     </property>
+    <property name="autoScroll">
+     <bool>true</bool>
+    </property>
+    <property name="selectionBehavior">
+     <enum>QAbstractItemView::SelectRows</enum>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+    <property name="verticalScrollMode">
+     <enum>QAbstractItemView::ScrollPerPixel</enum>
+    </property>
+    <property name="horizontalScrollMode">
+     <enum>QAbstractItemView::ScrollPerPixel</enum>
+    </property>
     <property name="showGrid">
      <bool>true</bool>
+    </property>
+    <property name="gridStyle">
+     <enum>Qt::SolidLine</enum>
     </property>
     <property name="wordWrap">
      <bool>true</bool>
@@ -116,20 +177,56 @@ QComboBox QAbstractItemView {
      <property name="text">
       <string>Новая строка</string>
      </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>Новая строка</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
     </row>
     <column>
      <property name="text">
       <string>№ первого вопроса</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Montserrat</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
      </property>
     </column>
     <column>
      <property name="text">
       <string>№ второго вопроса</string>
      </property>
+     <property name="font">
+      <font>
+       <family>Montserrat</family>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
     </column>
     <column>
      <property name="text">
       <string>№ задачи</string>
+     </property>
+     <property name="font">
+      <font>
+       <family>Montserrat</family>
+      </font>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
      </property>
     </column>
     <item row="0" column="0">
@@ -145,6 +242,21 @@ QComboBox QAbstractItemView {
     <item row="0" column="2">
      <property name="text">
       <string>3</string>
+     </property>
+    </item>
+    <item row="1" column="0">
+     <property name="text">
+      <string>4</string>
+     </property>
+    </item>
+    <item row="1" column="1">
+     <property name="text">
+      <string>5</string>
+     </property>
+    </item>
+    <item row="1" column="2">
+     <property name="text">
+      <string>6</string>
      </property>
     </item>
    </widget>
@@ -188,6 +300,9 @@ QComboBox QAbstractItemView {
      <item row="2" column="0">
       <widget class="QWidget" name="widget" native="true">
        <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <property name="topMargin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QTextEdit" name="textEdit_4">
           <property name="font">
@@ -524,6 +639,9 @@ QComboBox QAbstractItemView {
      <item row="1" column="0">
       <widget class="QWidget" name="widget_4" native="true">
        <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="topMargin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QTextEdit" name="textEdit_5">
           <property name="font">
@@ -741,6 +859,9 @@ QComboBox QAbstractItemView {
      <item row="1" column="0">
       <widget class="QWidget" name="widget_5" native="true">
        <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="topMargin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QTextEdit" name="textEdit_6">
           <property name="font">
@@ -1023,6 +1144,9 @@ QComboBox QAbstractItemView {
      <item row="2" column="0">
       <widget class="QWidget" name="widget_7" native="true">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="topMargin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QTextEdit" name="textEdit_2">
           <property name="font">
@@ -1152,6 +1276,9 @@ QComboBox QAbstractItemView {
      <item row="1" column="0">
       <widget class="QWidget" name="widget_8" native="true">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="topMargin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QTextEdit" name="textEdit_3">
           <property name="font">
