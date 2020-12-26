@@ -1,13 +1,13 @@
 #ifndef TESTWINDOW_H
 #define TESTWINDOW_H
 
-#include <QWidget>
+#include <QMainWindow>
 
 namespace Ui {
 class TestWindow;
 }
 
-class TestWindow : public QWidget
+class TestWindow : public QMainWindow
 {
     Q_OBJECT
 
@@ -19,4 +19,4 @@ private:
     Ui::TestWindow *ui;
 };
 
-#endif // TESTWINDOW_H
+#endif // TESTWONDOW_H

@@ -2,10 +2,11 @@
 #include "ui_ticketwindow.h"
 
 TicketWindow::TicketWindow(QWidget *parent) :
-    QWidget(parent),
+    QMainWindow(parent),
     ui(new Ui::TicketWindow)
 {
     ui->setupUi(this);
+    setFixedSize(this->width(), this->height());
 }
 
 TicketWindow::~TicketWindow()

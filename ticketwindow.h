@@ -1,13 +1,13 @@
 #ifndef TICKETWINDOW_H
 #define TICKETWINDOW_H
 
-#include <QWidget>
+#include <QMainWindow>
 
 namespace Ui {
 class TicketWindow;
 }
 
-class TicketWindow : public QWidget
+class TicketWindow : public QMainWindow
 {
     Q_OBJECT
 
