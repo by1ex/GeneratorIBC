@@ -36,6 +36,28 @@ QPushButton:pressed{
 	border-radius: 5px;
 	font: 12pt &quot;Segoe UI&quot;;
 	font-weight: 500;
+}
+
+QComboBox::drop-down 
+{
+    border: 0px;
+}
+
+QComboBox::down-arrow {
+	opacity: 0%;
+	image: url(:/resources/arrow.png);
+}
+ 
+QComboBox {
+    border-radius: 5px;
+	background-color: rgb(240, 240, 240);
+}
+
+QComboBox QAbstractItemView {
+	box-shadow: none;
+    selection-background-color:  rgb(240, 240, 240);
+	selection-color:  rgb(0, 0, 0);
+	border-radius: 5px;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -163,10 +185,29 @@ QPushButton:pressed{
      <property name="spacing">
       <number>0</number>
      </property>
-     <item row="1" column="0">
-      <widget class="QWidget" name="widget" native="true"/>
+     <item row="2" column="0">
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QTextEdit" name="textEdit_4">
+          <property name="font">
+           <font>
+            <family>Montserrat</family>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </item>
-     <item row="0" column="0">
+     <item row="1" column="0">
       <widget class="QFrame" name="frame_2">
        <property name="minimumSize">
         <size>
@@ -197,7 +238,7 @@ QPushButton:pressed{
         </property>
         <property name="styleSheet">
          <string notr="true">QFrame#hr3{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(239, 239, 239);
 }</string>
         </property>
         <property name="frameShape">
@@ -205,6 +246,119 @@ QPushButton:pressed{
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>140</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Механика</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>5</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Раздел</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QFrame" name="hr9">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>10</y>
+          <width>1</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame#hr9{
+	background-color: rgb(239, 239, 239);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_4">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>30</y>
+          <width>140</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Вопрос №4</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>5</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Первый вопрос</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -368,7 +522,26 @@ QPushButton:pressed{
       <number>0</number>
      </property>
      <item row="1" column="0">
-      <widget class="QWidget" name="widget_4" native="true"/>
+      <widget class="QWidget" name="widget_4" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QTextEdit" name="textEdit_5">
+          <property name="font">
+           <font>
+            <family>Montserrat</family>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </item>
      <item row="0" column="0">
       <widget class="QFrame" name="frame_5">
@@ -401,7 +574,7 @@ QPushButton:pressed{
         </property>
         <property name="styleSheet">
          <string notr="true">QFrame#hr4{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(239, 239, 239);
 }</string>
         </property>
         <property name="frameShape">
@@ -409,6 +582,119 @@ QPushButton:pressed{
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>5</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Раздел</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>140</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Магнетизм</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QFrame" name="hr10">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>10</y>
+          <width>1</width>
+          <height>40</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QFrame#hr10{
+	background-color: rgb(239, 239, 239);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_5">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>30</y>
+          <width>140</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Вопрос №31</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>5</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Второй вопрос</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -453,7 +739,26 @@ QPushButton:pressed{
       <number>0</number>
      </property>
      <item row="1" column="0">
-      <widget class="QWidget" name="widget_5" native="true"/>
+      <widget class="QWidget" name="widget_5" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QTextEdit" name="textEdit_6">
+          <property name="font">
+           <font>
+            <family>Montserrat</family>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </item>
      <item row="0" column="0">
       <widget class="QFrame" name="frame_8">
@@ -486,7 +791,7 @@ QPushButton:pressed{
         </property>
         <property name="styleSheet">
          <string notr="true">QFrame#hr5{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(239, 239, 239);
 }</string>
         </property>
         <property name="frameShape">
@@ -494,6 +799,52 @@ QPushButton:pressed{
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>140</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text">
+          <string>Задача №3</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>5</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat</family>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Задача</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
        </widget>
       </widget>
@@ -505,7 +856,7 @@ QPushButton:pressed{
      <rect>
       <x>20</x>
       <y>260</y>
-      <width>511</width>
+      <width>514</width>
       <height>111</height>
      </rect>
     </property>
@@ -544,24 +895,18 @@ QPushButton:pressed{
          <number>3</number>
         </property>
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QTextEdit" name="textEdit">
           <property name="font">
            <font>
             <family>Montserrat</family>
             <pointsize>9</pointsize>
            </font>
           </property>
-          <property name="text">
-           <string>Циркуляция вектора магнитной индукции. Закон полного тока в вакууме.</string>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
-          <property name="textFormat">
-           <enum>Qt::AutoText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
+          <property name="readOnly">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -599,7 +944,7 @@ QPushButton:pressed{
         </property>
         <property name="styleSheet">
          <string notr="true">QFrame#hr6{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(239, 239, 239);
 }</string>
         </property>
         <property name="frameShape">
@@ -675,35 +1020,29 @@ QPushButton:pressed{
      <property name="spacing">
       <number>0</number>
      </property>
-     <item row="1" column="0">
+     <item row="2" column="0">
       <widget class="QWidget" name="widget_7" native="true">
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QLabel" name="label_3">
+         <widget class="QTextEdit" name="textEdit_2">
           <property name="font">
            <font>
             <family>Montserrat</family>
             <pointsize>9</pointsize>
            </font>
           </property>
-          <property name="text">
-           <string>Корпускулярно-волновой дуализм света. Примеры. Энергия, импульс и масса фотона.</string>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
-          <property name="textFormat">
-           <enum>Qt::AutoText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
+          <property name="readOnly">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
        </layout>
       </widget>
      </item>
-     <item row="0" column="0">
+     <item row="1" column="0">
       <widget class="QFrame" name="frame_7">
        <property name="minimumSize">
         <size>
@@ -734,7 +1073,7 @@ QPushButton:pressed{
         </property>
         <property name="styleSheet">
          <string notr="true">QFrame#hr7{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(239, 239, 239);
 }</string>
         </property>
         <property name="frameShape">
@@ -814,24 +1153,18 @@ QPushButton:pressed{
       <widget class="QWidget" name="widget_8" native="true">
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QLabel" name="label_4">
+         <widget class="QTextEdit" name="textEdit_3">
           <property name="font">
            <font>
             <family>Montserrat</family>
             <pointsize>9</pointsize>
            </font>
           </property>
-          <property name="text">
-           <string>Шарик массой m, подвешенный на нити, отклонен от положения равновесия на угол 90° и отпущен. Какова должна быть прочность нити, чтобы шарик при движении не оборвал её?</string>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
-          <property name="textFormat">
-           <enum>Qt::AutoText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
+          <property name="readOnly">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -869,7 +1202,7 @@ QPushButton:pressed{
         </property>
         <property name="styleSheet">
          <string notr="true">QFrame#hr8{
-	background-color: rgb(204, 204, 204);
+	background-color: rgb(239, 239, 239);
 }</string>
         </property>
         <property name="frameShape">
