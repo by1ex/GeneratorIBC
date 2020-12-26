@@ -7,6 +7,8 @@ TicketWindow::TicketWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     setFixedSize(this->width(), this->height());
+    ui->editlabel->setStyleSheet("color: rgb(65, 146, 255)");
+    ui->createlabel->setStyleSheet("color: rgb(65, 146, 255)");
 }
 
 TicketWindow::~TicketWindow()
